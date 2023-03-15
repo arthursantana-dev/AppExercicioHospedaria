@@ -82,11 +82,26 @@ namespace AppExercicioHospedaria
 
         }
 
+        static void calculo_esgoto()
+        {
+            Console.Write("Insira o valor da taxa de esgoto: ");
+            double valor_taxa_esgoto = double.Parse(Console.ReadLine());
+
+            Console.Write("Isnira o total da conta: ");
+            double valor_conta = double.Parse(Console.ReadLine());
+
+            double percentual_taxa_esgoto = valor_taxa_esgoto / valor_conta;
+            Console.WriteLine($"O percentual da taxa de esgoto é {percentual_taxa_esgoto.ToString("P")}");
+
+
+        }
+
 
         static void Main(string[] args)
         {
             //faturamento_lucro();
-            exercicio_porcentagem();
+            //exercicio_porcentagem();
+            calculo_esgoto();
             Console.ReadLine();
         }
     }
